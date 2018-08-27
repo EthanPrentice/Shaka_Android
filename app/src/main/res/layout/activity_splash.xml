@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/splashConstraintLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="ethanprentice.com.partyplaylist.SplashActivity" >
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="0dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/splash_bg" />
+
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splashGuidelineLogo"
+        app:layout_constraintGuide_percent=".35"
+        android:orientation="horizontal"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splashGuidelineBtns"
+        app:layout_constraintGuide_percent=".45"
+        android:orientation="horizontal" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splashGuidelineVert10"
+        app:layout_constraintGuide_percent=".10"
+        android:orientation="vertical"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splashGuidelineVert90"
+        app:layout_constraintGuide_percent=".90"
+        android:orientation="vertical"/>
+
+
+
+    <!-- Holds logo and continue btn -->
+    <RelativeLayout
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/splashLogoLayout"
+
+        app:layout_constraintEnd_toEndOf="@id/splashGuidelineVert90"
+        app:layout_constraintStart_toStartOf="@id/splashGuidelineVert10"
+        app:layout_constraintTop_toTopOf="@id/splashGuidelineLogo" >
+
+        <ImageView
+            android:id="@+id/splashLogo"
+            android:layout_width="71dp"
+            android:layout_height="63dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:scaleType="fitXY"
+            android:tint="@color/splashAccent"
+            app:srcCompat="@drawable/shaka_logo"
+            tools:layout_editor_absoluteX="78dp"
+            tools:layout_editor_absoluteY="212dp" />
+
+        <ImageView
+            android:id="@+id/splashShakaText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/splashLogo"
+            android:layout_alignTop="@+id/splashLogo"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/splashLogo"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/splashAccent"
+            app:srcCompat="@drawable/shaka_text"
+            tools:layout_editor_absoluteX="162dp"
+            tools:layout_editor_absoluteY="214dp" />
+
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/splashAfterLoginLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/splashGuidelineBtns">
+
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/splashCreateBtn"
+            android:layout_width="293dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_bg"
+            android:padding="0dp"
+            android:scaleType="centerInside"
+            android:stateListAnimator="@animator/button_elevation"
+            android:visibility="invisible"
+
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:text="Create Party"
+
+            android:textColor="@color/splashAccent"
+            android:textSize="13pt"
+            android:textStyle="bold" />
+
+
+        <ethanprentice.com.partyplaylist.views.EditTextV2
+            android:id="@+id/splashJoinBtn"
+            android:layout_width="293dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_bg"
+
+            android:layout_marginTop="10dp"
+
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:hint="Join Party"
+            android:maxLength="6"
+
+            android:textColor="@color/splashAccent"
+            android:textColorHint="@color/splashAccent"
+
+            android:textCursorDrawable="@null"
+
+            android:textSize="13pt"
+            android:textStyle="bold"
+            android:visibility="invisible"
+
+            android:inputType="text"
+            android:singleLine="true"
+            android:imeOptions="actionGo"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/splashCreateBtn" />
+
+
+        <TextView
+            android:id="@+id/splashErrorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="0"
+            android:fontFamily="sans-serif-thin"
+            android:textAlignment="center"
+            android:textColor="@color/splashAccent"
+            android:textIsSelectable="false"
+            android:textSize="8pt"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/splashJoinBtn" />
+
+        <TextView
+            android:id="@+id/splashDisplayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:fontFamily="sans-serif-thin"
+            android:textAlignment="center"
+            android:textColor="@color/splashAccent"
+            android:textIsSelectable="false"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/splashErrorMessage" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/splashPoweredBySpotify"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/powered_by_spotify" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@color/colorPrimary"
+    tools:context=".PlayerActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/maximizedPlayerHeader"
+        android:layout_width="match_parent"
+        android:elevation="2dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="65dp" >
+
+        <ImageView
+            android:id="@+id/maximizedHeaderAlbumArt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_marginStart="10dp"
+
+            android:src="@color/colorPrimaryDark"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constrainedWidth="true"
+            app:layout_constraintHorizontal_bias="0"
+
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="10dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/minimizedTogglePB"
+            app:layout_constraintStart_toEndOf="@id/maximizedHeaderAlbumArt"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/maximizedTrackTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Track Title"
+                android:textAlignment="textStart"
+
+                android:textColor="@color/colorAccent"
+
+                android:textSize="14sp"
+                android:textStyle="bold"
+
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/maximizedArtistName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="15dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Artist Name"
+                android:textAlignment="textStart"
+
+                android:textColor="@color/colorAccent"
+
+                android:textSize="10sp"
+
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/maximizedTrackTitle"
+                app:layout_constraintTop_toBottomOf="@id/maximizedTrackTitle" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <ImageButton
+            android:id="@+id/maximizedMusicQueue"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+
+            android:elevation="4dp"
+
+            android:layout_marginEnd="15dp"
+            android:scaleType="fitCenter"
+
+            android:onClick="openQueue"
+
+            android:background="@android:color/transparent"
+
+            android:src="@drawable/ic_round_queue"
+            android:tint="@color/colorAccent85"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/maximizedMenuOverflow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/maximizedMenuOverflow"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+
+            android:elevation="4dp"
+
+            android:layout_marginEnd="15dp"
+            android:scaleType="fitCenter"
+
+            android:background="@android:color/transparent"
+
+            android:src="@drawable/ic_overflow_vert"
+            android:tint="@color/colorAccent85"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fragContainerPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/maximizedPlayerHeader"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

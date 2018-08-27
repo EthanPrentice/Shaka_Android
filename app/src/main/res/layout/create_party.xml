@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/createPartyLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <ethanprentice.com.partyplaylist.views.EditTextV2
+        android:id="@+id/createPartyName"
+        android:layout_width="293dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_bg"
+
+        android:layout_marginTop="10dp"
+
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:hint="Party Name"
+        android:maxLength="6"
+
+        android:textColor="@color/splashAccent"
+
+        android:textCursorDrawable="@null"
+
+        android:textSize="13pt"
+        android:textStyle="bold"
+        android:visibility="visible"
+
+        android:inputType="text"
+        android:singleLine="true"
+        android:imeOptions="actionGo" />
+
+
+    <TextView
+        android:id="@+id/createPartyID"
+        android:layout_width="293dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_bg"
+
+        android:layout_marginTop="10dp"
+
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="\??????"
+        android:maxLength="6"
+
+        android:textColor="@color/splashAccent"
+        android:textColorHint="@color/splashAccent"
+
+        android:textCursorDrawable="@null"
+
+        android:textSize="13pt"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:singleLine="true"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createPartyName"/>
+
+    <CheckBox
+        android:id="@+id/createPartyShowNearby"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Show Nearby"
+        android:singleLine="true"
+        android:button="?android:attr/listChoiceIndicatorMultiple"
+        android:buttonTint="@color/splashAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createPartyID" />
+
+    <TextView
+        android:id="@+id/splashErrorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:alpha="0"
+        android:fontFamily="sans-serif-thin"
+        android:textAlignment="center"
+        android:textColor="@color/splashAccent"
+        android:textIsSelectable="false"
+        android:textSize="8pt"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splashJoinBtn" />
+
+
+</android.support.constraint.ConstraintLayout>

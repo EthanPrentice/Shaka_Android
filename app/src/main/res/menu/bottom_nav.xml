@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/navigation_search"
+        android:checked="false"
+        android:checkable="true"
+        android:icon="@drawable/ic_search"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/navigation_party"
+        android:checked="true"
+        android:checkable="true"
+        android:icon="@drawable/shaka_logo"
+        android:title="Party" />
+
+    <item
+        android:id="@+id/navigation_library"
+        android:checked="false"
+        android:checkable="true"
+        android:icon="@drawable/hammer"
+        android:title="Library" />
+
+</menu>

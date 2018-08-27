@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/track_action_play_now"
+        android:checked="false"
+        android:checkable="false"
+        android:title="Play" />
+
+    <item
+        android:id="@+id/track_action_play_next"
+        android:checked="false"
+        android:checkable="false"
+        android:title="Play Next" />
+
+    <item
+        android:id="@+id/track_action_add"
+        android:checked="false"
+        android:checkable="false"
+        android:title="Add to Queue" />
+</menu>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topNav"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical|start"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+
+    android:elevation="4dp"
+    android:clipToPadding="false"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mainHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mainHeaderIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="0dp"
+            android:elevation="6dp"
+            android:padding="4dp"
+            android:src="@color/userIconOrange"
+
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="0.5dp"
+
+            android:visibility="gone"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mainPartyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\??????"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif"
+
+            android:visibility="gone"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/searchBar"
+
+            style="@style/SearchViewStyle"
+            android:layout_width="match_parent"
+
+            android:layout_height="38dp"
+
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginTop="4dp"
+            android:clipToPadding="false"
+            android:elevation="2dp"
+            android:padding="0.5dp"
+
+            app:iconifiedByDefault="false"
+
+            android:visibility="gone"
+
+            android:background="@drawable/search_bg"
+            android:backgroundTint="@color/colorAccent"
+            app:queryBackground="@android:color/transparent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/mainShakaText"
+            android:layout_width="100dp"
+            android:layout_height="15dp"
+
+            android:scaleType="fitXY"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/colorAccent"
+            android:tint="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/shaka_text" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+</android.support.v7.widget.Toolbar>
